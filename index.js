@@ -76,7 +76,6 @@ app.post('/upload', upload.single('image'), async (req, res) => {
         res.status(500).json({ error: 'Error saving image' });
     }
 });
-
 app.get('/uploads/:id', async (req, res) => {
     try {
         const image = await Image.findById(req.params.id);
